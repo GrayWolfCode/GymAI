@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Smart Gym Tracker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+  <div id="video-container">
+    <video id="video" controls width="800" height="1500">
+      <source src="/video.mp4" type="video/mp4" />
+    </video>
+    <canvas id="canvas" width="800" height="1500"></canvas>
+  </div>
+  <div></div>
+  <div id="controls-container">
+    <div>
+      <img id="logo" src="/VIA-02.jpg" alt="vai_logo" />
+      <h1>Smart Exercise Tracker</h1>
+      <button id="startButton">Start</button>
+    </div>
+    <div id="repsDiv">
+      <h2>Reps:</h2>
+      <div id="repetitionCount">0</div>
+    </div>
+  </div>
+
+  <!-- Require the peer dependencies of pose-detection. -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+
+  <!-- You must explicitly require a TF.js backend if you're not using the TF.js union bundle. -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
